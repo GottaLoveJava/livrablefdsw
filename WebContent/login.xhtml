@@ -6,11 +6,14 @@
 
 <h:head>
 	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="style3.css"></h:outputStylesheet>
 </h:head>
 <body>
-	<div class="jumbotron">
-		<h1>#{messages['accueil.welcome']}</h1>
-		<f:view locale="#{languageController.locale}" />
+	<div align='center'>
+		<div style="background-color: powderblue; height: 20em">
+			<label style="font-weight: bold"> <h1 style="padding-top: 4em">
+		#{messages['accueil.welcome']}</h1></label></div>
+		<div class="jumbotron"><f:view locale="#{languageController.locale}" />
 
 		<h:commandButton value="Français"
 			action="#{languageController.changeLanguage('fr')}" />
@@ -22,6 +25,7 @@
 			<br />
 	
 		</h:form>
+	</div>
 	</div>
 </body>
 </html>

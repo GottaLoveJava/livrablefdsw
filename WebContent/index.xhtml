@@ -9,76 +9,54 @@
 	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
 </h:head>
 <h:body>
+	<div align='center'>
+		<div style="background-color: powderblue; height: 5em">
+			<label style="font-weight: bold">
+				<h3 style="padding-top: 0.5em">Veuillez remplir les champs
+					suivants</h3>
+			</label>
+		</div>
+		<div align="center" class="jumbotron">
+			<h:form>
+				<h:panelGrid columns="2">
+					<label>Nom : </label>
+					<h:inputText value="#{studentBean.name}" label="Nom" id="nom">
+						<f:validateLength minimum="2" />
+					</h:inputText>
+					<br />
+					<label>Prénom : </label>
+					<h:inputText value="#{studentBean.forname}" label="Prénom"
+						id="prénom">
+						<f:validateLength minimum="2" />
+					</h:inputText>
+					<br />
 
-	<div align="center" class="jumbotron">
-		<h3>Veuillez remplir les champs suivants</h3>
-		<h:form>
-			<h:panelGrid columns="2">
-				<label>Nom : </label>
-				<h:inputText value="#{studentBean.name}" label="Nom" id="nom">
-					<f:validateLength minimum="2" />
-				</h:inputText>
+					<label> Email : </label>
+					<h:inputText value="#{studentBean.email}" label="Email" id="email">
+						<f:validateLength minimum="8" />
+					</h:inputText>
+					<br />
+				</h:panelGrid>
+
 				<br />
-				<label>Prénom : </label>
-				<h:inputText value="#{studentBean.forname}" label="Prénom"
-					id="prénom">
-					<f:validateLength minimum="2" />
-				</h:inputText>
+				<h:commandButton value="Valider" action="infos" />
+				<h:commandButton value="Déconnexion" action="cancel"></h:commandButton>
+				<br />
+				<br />
+				<h:message for="nom" errorStyle="color:red" />
+				<br />
+				<h:message for="prénom" errorStyle="color:red" />
+				<br />
+				<h:message for="email" errorStyle="color:red" />
 				<br />
 
-				<label> Email : </label>
-				<h:inputText value="#{studentBean.email}" label="Email" id="email">
-					<f:validateLength minimum="8" />
-				</h:inputText>
-				<br />
-
-				<label>Note projet 1 : </label>
-				<h:inputText value="#{studentBean.project1Grade}" label="Projet 1 "
-					id="pr1">
-					<f:validateDoubleRange />
-				</h:inputText>
-				<br />
-
-				<label>Note projet 2: </label>
-				<h:inputText value="#{studentBean.project2Grade}" label="Projet 2"
-					id="pr2">
-					<f:validateDoubleRange />
-				</h:inputText>
-			</h:panelGrid>
-
-			<h:outputText value="Genre :" />
-			<h:selectOneMenu value="#{studentBean.imageUri}">
-
-				<f:selectItem
-					itemValue="resources/img/061011-lapin-cretin-1_s2e.jpg"
-					itemLabel="Indéterminé" />
-				<f:selectItem
-					itemValue="resources/img/53556883a2bf4fe641df4044_scarlett-johansson-vanity-fair-ss01.jpg"
-					itemLabel="Féminin" />
-				<f:selectItem
-					itemValue="resources/img/arnold-schwarzenegger-beach-1.jpg"
-					itemLabel="Masculin" />
-			</h:selectOneMenu>
-			<br />
-			<h:commandButton value="Valider" action="infos" />
-			<h:commandButton value="Déconnexion" action="cancel"></h:commandButton>
-			<br />
-			<br />
-			<h:message for="nom" errorStyle="color:red" />
-			<br />
-			<h:message for="prénom" errorStyle="color:red" />
-			<br />
-			<h:message for="email" errorStyle="color:red" />
-			<br />
-			<h:message for="pr1" errorStyle="color:red" />
-			<br />
-			<h:message for="pr2" errorStyle="color:red" />
 
 
 
-			<h:graphicImage value="#{studentBean.imageUri}" width="300"
-				height="500" />
-		</h:form>
+				<h:graphicImage value="#{studentBean.imageUri}" width="330"
+					height="500" />
+			</h:form>
+		</div>
 	</div>
 </h:body>
 </html>

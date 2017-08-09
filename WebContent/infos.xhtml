@@ -9,32 +9,40 @@
 	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
 </h:head>
 <h:body>
-	<div class="jumbotron">
+	<div align='center'>
 
-		<h:form>
+		<div style="background-color: powderblue; height: 5em">
+			<label style="font-weight: bold">
+				<h3 style="padding-top: 0.5em">Informations saisies</h3>
+			</label>
+		</div>
 
-			<h:column>Nom : #{studentBean.name}</h:column>
-			<br />
+		<div class="jumbotron">
 
-			<h:column>Prénom : #{studentBean.forname}</h:column>
-			<br />
-			<h:column>Email : #{studentBean.email}</h:column>
-			<br />
-			<h:column>Projet 1 : #{studentBean.project1Grade}</h:column>
-			<br />
-			<h:column>Projet 2 : #{studentBean.project2Grade}</h:column>
-			<br />
+			<h:form>
 
-			<h:commandButton
-				value="Retour à la page précédente si vous souhaitez modifier ces informations"
-				action="index"></h:commandButton>
-						<h:commandButton
-				value="Déconnexion"
-				action="cancel"></h:commandButton>
-										<h:commandButton
-				value="Aller sur la page de l'Institut Pasteur"
-				action="accueil"></h:commandButton>
-					</h:form>
+				<h:column>Nom : #{studentBean.name}</h:column>
+				<br />
+				<br />
+				<h:column>Prénom : #{studentBean.forname}</h:column>
+				<br />
+				<br />
+				<h:column>Email : #{studentBean.email}</h:column>
+				<br />
+				<br/>
+
+
+				<h:commandButton
+					value="Retour à la page précédente si vous souhaitez modifier ces informations"
+					action="index"></h:commandButton>
+
+				<h:commandButton value="Aller sur la page de l'Institut Pasteur"
+					action="accueil"></h:commandButton>
+				<br />
+				<br />
+				<h:commandButton value="Déconnexion" action="cancel"></h:commandButton>
+			</h:form>
+		</div>
 	</div>
 </h:body>
 

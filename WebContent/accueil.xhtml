@@ -6,13 +6,15 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>#{virusBean.name}</title>
-
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
 </h:head>
 <h:body>
 	<div align='center'>
 		<div style="background-color: powderblue; height: 20em">
-			<label style="font-weight: bold"> <h1 style="padding-top: 4em">Bienvenue sur le site de
-				l'Institut Pasteur</h1> </label> <br />
+			<label style="font-weight: bold">
+				<h1 style="padding-top: 4em">Bienvenue sur le site de
+					l'Institut Pasteur</h1>
+			</label> <br />
 		</div>
 		<h:form>
 			<label>Choisissez un virus :</label>
@@ -24,6 +26,7 @@
 			<h:commandButton value="Rage" action="resultat3"></h:commandButton>
 
 			<br />
+			<h:commandButton value="Déconnexion" action="cancel"></h:commandButton>
 			<br />
 
 
