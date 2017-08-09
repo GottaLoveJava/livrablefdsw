@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+</h:head>
+<body>
+	<div class="jumbotron">
+		<h1>#{messages['accueil.welcome']}</h1>
+		<f:view locale="#{languageController.locale}" />
+
+		<h:commandButton value="Français"
+			action="#{languageController.changeLanguage('fr')}" />
+		<h:commandButton value="English"
+			action="#{languageController.changeLanguage('en')}" />
+		<h:form>
+#{messages['accueil.alreadyMembre']} <h:commandLink action="index.xhtml"
+				value="Veuillez cliquer ici pour accéder au menu suivant" />
+			<br />
+	
+		</h:form>
+	</div>
+</body>
+</html>

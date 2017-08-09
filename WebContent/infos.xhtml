@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="jumbotron">
+
+		<h:form>
+
+			<h:column>Nom : #{studentBean.name}</h:column>
+			<br />
+
+			<h:column>Prénom : #{studentBean.forname}</h:column>
+			<br />
+			<h:column>Email : #{studentBean.email}</h:column>
+			<br />
+			<h:column>Projet 1 : #{studentBean.project1Grade}</h:column>
+			<br />
+			<h:column>Projet 2 : #{studentBean.project2Grade}</h:column>
+			<br />
+
+			<h:commandButton
+				value="Retour à la page précédente si vous souhaitez modifier ces informations"
+				action="index"></h:commandButton>
+						<h:commandButton
+				value="Déconnexion"
+				action="cancel"></h:commandButton>
+										<h:commandButton
+				value="Aller sur la page de l'Institut Pasteur"
+				action="accueil"></h:commandButton>
+					</h:form>
+	</div>
+</h:body>
+
+</html>
