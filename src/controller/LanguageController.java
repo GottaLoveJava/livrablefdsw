@@ -10,7 +10,7 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 
 public class LanguageController {
-private Locale locale;
+private Locale locale = FacesContext.getCurrentInstance().getViewRoot().getLocale();
 	public String changeLanguage(String language) {
 	locale = new Locale(language);
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);

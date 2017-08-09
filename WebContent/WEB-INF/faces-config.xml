@@ -5,7 +5,7 @@
 	version="2.2">
 
 	<navigation-rule>
-		<from-view-id>/*</from-view-id>
+		<from-view-id>*</from-view-id>
 		<navigation-case>
 			<from-outcome>cancel</from-outcome>
 			<to-view-id>/login.xhtml</to-view-id>
